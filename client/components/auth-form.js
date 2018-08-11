@@ -1,79 +1,80 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import PropTypes from 'prop-types'
-import {auth} from '../store'
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Container, Card, Button, Form } from 'semantic-ui-react';
+import { login } from '../store';
 
-/**
- * COMPONENT
- */
-const AuthForm = (props) => {
-  const {name, displayName, handleSubmit, error} = props
-
+const LogIn = props => {
+  const { name, handleSubmit, error } = props;
   return (
     <div>
-      <form onSubmit={handleSubmit} name={name}>
-        <div>
-          <label htmlFor="email"><small>Email</small></label>
-          <input name="email" type="text" />
-        </div>
-        <div>
-          <label htmlFor="password"><small>Password</small></label>
-          <input name="password" type="password" />
-        </div>
-        <div>
-          <button type="submit">{displayName}</button>
-        </div>
-        {error && error.response && <div> {error.response.data} </div>}
-      </form>
-      <a href="/auth/google">{displayName} with Google</a>
+      <div>
+        <img
+          id="background-image"
+          src="/img/river.jpeg"
+          alt="background image"
+        />
+      </div>
+      <Container className="authorization-form">
+        <Card className="auth-card">
+          <Card.Content>
+            <Form onSubmit={handleSubmit} name={name}>
+              <Form.Field>
+                <label htmlFor="email">Email</label>
+                <input name="email" type="text" placeholder="Email" />
+              </Form.Field>
+              <Form.Field>
+                <label htmlFor="password">Password</label>
+                <input name="password" type="text" placeholder="Password" />
+              </Form.Field>
+              <Button
+                color="teal"
+                content="Log In with Account"
+                labelPosition="left"
+                icon="user"
+                type="submit"
+                className="wide-button"
+              />
+              {error && error.response && <div> {error.response.data} </div>}
+            </Form>
+            <Button
+              as="a"
+              href="/auth/google"
+              labelPosition="left"
+              content="Log In with Google"
+              icon="google"
+              className="wide-button"
+            />
+          </Card.Content>
+        </Card>
+      </Container>
     </div>
-  )
-}
+  );
+};
 
-/**
- * CONTAINER
- *   Note that we have two different sets of 'mapStateToProps' functions -
- *   one for Login, and one for Signup. However, they share the same 'mapDispatchToProps'
- *   function, and share the same Component. This is a good example of how we
- *   can stay DRY with interfaces that are very similar to each other!
- */
-const mapLogin = (state) => {
+const mapLogin = state => {
   return {
     name: 'login',
-    displayName: 'Login',
-    error: state.user.error
-  }
-}
+    displayName: 'Log In',
+    error: state.user.error,
+  };
+};
 
-const mapSignup = (state) => {
+const mapDispatch = dispatch => {
   return {
-    name: 'signup',
-    displayName: 'Sign Up',
-    error: state.user.error
-  }
-}
+    handleSubmit(evt) {
+      evt.preventDefault();
+      const email = evt.target.email.value;
+      const password = evt.target.password.value;
+      dispatch(login(email, password));
+    },
+  };
+};
 
-const mapDispatch = (dispatch) => {
-  return {
-    handleSubmit (evt) {
-      evt.preventDefault()
-      const formName = evt.target.name
-      const email = evt.target.email.value
-      const password = evt.target.password.value
-      dispatch(auth(email, password, formName))
-    }
-  }
-}
+export default connect(mapLogin, mapDispatch)(LogIn);
 
-export const Login = connect(mapLogin, mapDispatch)(AuthForm)
-export const Signup = connect(mapSignup, mapDispatch)(AuthForm)
-
-/**
- * PROP TYPES
- */
-AuthForm.propTypes = {
+LogIn.propTypes = {
   name: PropTypes.string.isRequired,
-  displayName: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  error: PropTypes.object
-}
+  error: PropTypes.object,
+};

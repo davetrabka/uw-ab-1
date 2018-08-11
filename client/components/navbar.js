@@ -1,56 +1,63 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-import {logout} from '../store'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { logout, me } from '../store';
 
-const Navbar = ({ handleClick, isLoggedIn }) => (
-  <div>
-    <h1>BOILERMAKER</h1>
-    <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
-    </nav>
-    <hr />
-  </div>
-)
+class Navbar extends Component {
+  componentDidMount = () => {
+    this.props.loadInitialData();
+  };
 
-/**
- * CONTAINER
- */
-const mapState = state => {
-  return {
-    isLoggedIn: !!state.user.id
+  render() {
+    return (
+      <nav role="navigation">
+        <div className="nav-wrapper">
+          <Link to="/">
+            <i id="home-icon" className="fas fa-home" /> Home
+          </Link>
+          <ul className="right hide-on-med-and-down">
+            <li>
+              <Link to="/reviews" className="white-text">
+                Our Reviews
+              </Link>
+            </li>
+            <li>
+              <Link to="/directions" className="white-text">
+                Getting Here
+              </Link>
+            </li>
+            <li>
+              <Link to="/neighborhood" className="white-text">
+                About Boonville
+              </Link>
+            </li>
+            {this.props.isLoggedIn ? (
+              <li>
+                <Link
+                  to="#"
+                  className="logout waves-effect waves-light white teal-text btn-small"
+                  onClick={this.props.handleLogout}>
+                  Log Out
+                </Link>
+              </li>
+            ) : (
+              ''
+            )}
+          </ul>
+        </div>
+      </nav>
+    );
   }
 }
 
-const mapDispatch = dispatch => {
-  return {
-    handleClick() {
-      dispatch(logout())
-    }
-  }
-}
+const mapState = state => ({
+  userId: state.user.id,
+  isLoggedIn: !!state.user.id,
+});
 
-export default connect(mapState, mapDispatch)(Navbar)
+const mapDispatch = dispatch => ({
+  loadInitialData: () => dispatch(me()),
+  handleLogout: () => dispatch(logout()),
+});
 
-/**
- * PROP TYPES
- */
-Navbar.propTypes = {
-  handleClick: PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.bool.isRequired
-}
+export default connect(mapState, mapDispatch)(Navbar);

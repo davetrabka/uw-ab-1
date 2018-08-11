@@ -1,51 +1,57 @@
-/**
- * Welcome to the seed file! This seed file uses a newer language feature called...
- *
- *                  -=-= ASYNC...AWAIT -=-=
- *
- * Async-await is a joy to use! Read more about it in the MDN docs:
- *
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
- *
- * Now that you've got the main idea, check it out in practice below!
- */
-const db = require('../server/db')
-const {User} = require('../server/db/models')
+const db = require('../server/db');
+const { User, Review } = require('../server/db/models');
 
-async function seed () {
-  await db.sync({force: true})
-  console.log('db synced!')
-  // Whoa! Because we `await` the promise that db.sync returns, the next line will not be
-  // executed until that promise resolves!
+async function seed() {
+  await db.sync({ force: true });
+  console.log('db synced!');
 
-  const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
-  ])
-  // Wowzers! We can even `await` on the right-hand side of the assignment operator
-  // and store the result that the promise resolves to in a variable! This is nice!
-  console.log(`seeded ${users.length} users`)
-  console.log(`seeded successfully`)
+  await Promise.all([
+    User.create({ email: 'admin@email.com', password: '123' }),
+  ]);
+
+  await Promise.all([
+    Review.create({
+      author: 'Terry',
+      date: 'July 2018',
+      review:
+        'Very nice home away from home! We loved the outdoor space, a lovely patio off the kitchen, perfect for sipping our morning coffee, and a screened in porch. Lots of room upstairs and down. Within 30 minutes of Arrow Rock. We heartily recommend it!',
+    }),
+    Review.create({
+      author: 'Jasmyne',
+      date: 'July 2018',
+      review:
+        'Rob’s home was absolutely amazing . My family of 9 slept , ate , and enjoyed ourselves comfortably . We all loved it ! Everything was clean , stylish and just wonderful . The kids were able to enjoy the backyard and the adults were able to hang out in the screened area and relax . I could go on and on about how amazing this place was . We will not hesitate to book again the next time we visit Missouri !! Thanks so much for the hospitality, Rob !',
+    }),
+    Review.create({
+      author: 'Richard',
+      date: 'July 2018',
+      review:
+        "BIG house, but was also just perfect for my wife and eye. Super clean and comfy throughout. Communications were almost instantaneous and the entire transaction was completely seamless! Positively the best stocked kitchen we have ever travelled to! Don't hesitate to book this one!",
+    }),
+    Review.create({
+      author: 'Billie',
+      date: 'July 2018',
+      review:
+        'The accommodation where exactly as described. The accommodation were clean and the house was very organized and equipped with everything one would expect or need. My daughter loved the “post cards” and the holiday decorations added the extra touches to make this a great experience.',
+    }),
+    Review.create({
+      author: 'Michael',
+      date: 'July 2018',
+      review:
+        'This place is amazing! Great stay had everything yout would need! Would stay again in the future.',
+    }),
+  ]);
+
+  console.log(`seeded successfully`);
 }
 
-// Execute the `seed` function
-// `Async` functions always return a promise, so we can use `catch` to handle any errors
-// that might occur inside of `seed`
 seed()
   .catch(err => {
-    console.error(err.message)
-    console.error(err.stack)
-    process.exitCode = 1
+    console.error(err.message);
+    console.error(err.stack);
+    process.exitCode = 1;
   })
   .then(() => {
-    console.log('closing db connection')
-    db.close()
-    console.log('db connection closed')
-  })
-
-/*
- * note: everything outside of the async function is totally synchronous
- * The console.log below will occur before any of the logs that occur inside
- * of the async function
- */
-console.log('seeding...')
+    db.close();
+    console.log('db connection closed');
+  });
