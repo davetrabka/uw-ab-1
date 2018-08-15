@@ -11,7 +11,7 @@ const Landing = () => (
     <Booking />
     <Description />
     <HomeDetails />
-    <ReviewCarousel />
+    {/* <ReviewCarousel /> */}
   </React.Fragment>
 );
 
