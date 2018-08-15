@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Landing from './components/landing';
 import ReviewsList from './components/reviews-list';
 import LogIn from './components/auth-form';
+import UserDashboard from './components/user-dashboard/user-home';
 import { me } from './store';
 
 class Routes extends Component {
@@ -22,7 +23,7 @@ class Routes extends Component {
         <Route exact path="/login" component={LogIn} />
         {isLoggedIn && (
           <Switch>
-            <Route path="/home" component={Landing} />
+            <Route path="/admin" component={UserDashboard} />
           </Switch>
         )}
         <Route component={Landing} />

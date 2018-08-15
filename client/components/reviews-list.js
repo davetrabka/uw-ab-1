@@ -14,7 +14,7 @@ class ReviewsList extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container reviews-container">
         <img
           id="background-image"
           src="/img/river.jpeg"

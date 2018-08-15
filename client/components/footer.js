@@ -64,15 +64,21 @@ const Footer = () => (
       </div>
     </div>
     <div className="footer-copyright">
-      <div className="container">
-        <i className="far fa-copyright " /> Copyright 2018 | Built by{' '}
-        <a
-          className="white-text cursive"
-          href="http://davidtrabka.com"
-          target="_blank"
-          rel="noopener noreferrer">
-          Dave Trabka
-        </a>
+      <div className="container space-between">
+        <Link to="/login" className="white-text space-between">
+          <i className="fas fa-unlock-alt lock-icon" />
+          <p> Admin Access</p>
+        </Link>
+        <div>
+          <i className="far fa-copyright " /> Copyright 2018 | Built by{' '}
+          <a
+            className="white-text cursive"
+            href="http://davidtrabka.com"
+            target="_blank"
+            rel="noopener noreferrer">
+            Dave Trabka
+          </a>
+        </div>
       </div>
     </div>
   </footer>

@@ -40,6 +40,12 @@ async function seed() {
       review:
         'This place is amazing! Great stay had everything yout would need! Would stay again in the future.',
     }),
+    Review.create({
+      author: 'Geoff',
+      date: 'June 2018',
+      review:
+        'This was our second stay at Robert’s and it was just as great as the first! Beautiful, clean home decorated for the seasons. Great communication, fun location right by the Katy strait, and all the comforts of home! Highly recommend.',
+    }),
   ]);
 
   console.log(`seeded successfully`);

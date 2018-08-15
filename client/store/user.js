@@ -21,7 +21,7 @@ export const auth = (email, password, method) => dispatch =>
     .then(
       res => {
         dispatch(getUser(res.data));
-        history.push('/home');
+        history.push('/admin');
       },
       authError => {
         dispatch(getUser({ error: authError }));

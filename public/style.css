@@ -40,9 +40,20 @@ form div {
   align-items: center;
 }
 
+.login-card-container {
+  height: 75vh !important;
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+}
+
+.card-panel {
+  min-height: 18rem;
+}
+
 #divider-line {
   display: block;
-  height: 4px;
+  height: 3px;
   width: 100px;
   background-color: #26a69a;
   content: '';
@@ -106,9 +117,8 @@ input {
 
 #background-image {
   z-index: -1;
-  min-height: 100%;
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -196,8 +206,9 @@ ui.button {
   z-index: 100;
 }
 
-.container {
-  padding-top: 75px;
+.reviews-container {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 .parallax-container {
@@ -234,6 +245,20 @@ ui.button {
   background-size: cover;
 }
 
+.parallax-hike {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url('/img/hiking-path.jpeg');
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lock-icon {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
 .parallax-container .section {
   width: 100%;
 }
@@ -256,7 +281,7 @@ ui.button {
 }
 
 footer.page-footer {
-  margin: 0;
+  margin: 0 0;
 }
 
 .icons-container {
@@ -293,6 +318,10 @@ footer.page-footer {
   width: auto;
   height: 60px;
   margin: 10px 45px;
+}
+
+.dashboard-container {
+  padding: 7rem 0;
 }
 
 @media only screen and (max-width: 992px) {

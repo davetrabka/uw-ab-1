@@ -1,58 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Container, Card, Button, Form } from 'semantic-ui-react';
-import { login } from '../store';
+import { auth } from '../store';
 
-const LogIn = props => {
-  const { name, handleSubmit, error } = props;
-  return (
-    <div>
-      <div>
+class LogIn extends Component {
+  render() {
+    const { name, handleSubmit, error } = this.props;
+    return (
+      <div id="loading" className="row container login-card-container">
         <img
           id="background-image"
-          src="/img/river.jpeg"
+          src="/img/outside-home-front.jpg"
           alt="background image"
         />
+        <div className="col m4 offset-m5 s12">
+          <div className="card-panel">
+            <form onSubmit={handleSubmit} name={name}>
+              <div className="input-field col s12">
+                <input id="email" type="text" />
+                <label name="email" htmlFor="email">
+                  Email
+                </label>
+              </div>
+              <div className="input-field col s12">
+                <input id="password" type="text" />
+                <label name="password" htmlFor="password">
+                  Password
+                </label>
+              </div>
+              <div>
+                <button className="waves-effect waves-light btn" type="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+            {error && error.response && <div> {error.response.data} </div>}
+          </div>
+        </div>
+        <div className="parallax parallax-hike" />
       </div>
-      <Container className="authorization-form">
-        <Card className="auth-card">
-          <Card.Content>
-            <Form onSubmit={handleSubmit} name={name}>
-              <Form.Field>
-                <label htmlFor="email">Email</label>
-                <input name="email" type="text" placeholder="Email" />
-              </Form.Field>
-              <Form.Field>
-                <label htmlFor="password">Password</label>
-                <input name="password" type="text" placeholder="Password" />
-              </Form.Field>
-              <Button
-                color="teal"
-                content="Log In with Account"
-                labelPosition="left"
-                icon="user"
-                type="submit"
-                className="wide-button"
-              />
-              {error && error.response && <div> {error.response.data} </div>}
-            </Form>
-            <Button
-              as="a"
-              href="/auth/google"
-              labelPosition="left"
-              content="Log In with Google"
-              icon="google"
-              className="wide-button"
-            />
-          </Card.Content>
-        </Card>
-      </Container>
-    </div>
-  );
-};
+    );
+  }
+}
 
-const mapLogin = state => {
+const mapState = state => {
   return {
     name: 'login',
     displayName: 'Log In',
@@ -66,12 +57,13 @@ const mapDispatch = dispatch => {
       evt.preventDefault();
       const email = evt.target.email.value;
       const password = evt.target.password.value;
-      dispatch(login(email, password));
+      const formName = evt.target.name;
+      dispatch(auth(email, password, formName));
     },
   };
 };
 
-export default connect(mapLogin, mapDispatch)(LogIn);
+export default connect(mapState, mapDispatch)(LogIn);
 
 LogIn.propTypes = {
   name: PropTypes.string.isRequired,
