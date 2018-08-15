@@ -17,18 +17,13 @@ class Navbar extends Component {
           </Link>
           <ul className="right hide-on-med-and-down">
             <li>
-              <Link to="/reviews" className="white-text">
-                Our Reviews
-              </Link>
-            </li>
-            <li>
-              <Link to="/directions" className="white-text">
-                Getting Here
-              </Link>
-            </li>
-            <li>
               <Link to="/neighborhood" className="white-text">
                 About Boonville
+              </Link>
+            </li>
+            <li>
+              <Link to="/reviews" className="white-text">
+                Our Reviews
               </Link>
             </li>
             {this.props.isLoggedIn ? (

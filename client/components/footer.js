@@ -6,14 +6,19 @@ const Footer = () => (
     <div className="container">
       <div className="row">
         <div className="col l6 s12">
-          <h5 className="white-text">About Your Hosts</h5>
+          <h5 className="white-text">From Robert, Your Superhost:</h5>
           <p className="grey-text text-lighten-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            "I believe in traveling the world, meeting new people, and
+            experiencing new cultures. Life is too short to put things off. My
+            partner and I believe in good food, good friends, and fun
+            adventures!
+          </p>
+          <p className="grey-text text-lighten-4">
+            As a host, I want your experience to be special. The house is
+            decorated for each season and holiday, and we encourage guests to
+            "make it their own" during their stay. Questions? We'll try and find
+            an answer! Requests? We love them! Don't ever be afraid to reach out
+            - I am here to help!"
           </p>
         </div>
         <div className="col l2 s12" />
