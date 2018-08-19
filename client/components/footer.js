@@ -5,7 +5,7 @@ const Footer = () => (
   <footer id="footer" className="page-footer teal">
     <div className="container">
       <div className="row">
-        <div className="col l8 s12">
+        <div className="col l7 s12">
           <h5 className="grey-text text-lighten-4">
             From <span className="cursive-robert white-text"> Robert</span> ,
             Your Superhost:
@@ -24,7 +24,7 @@ const Footer = () => (
             - I am here to help!"
           </p>
         </div>
-        <div className="col l2 s12" />
+        <div className="col l1 s12" />
         <div className="col l2 s12">
           <h5 className="white-text">Go To:</h5>
           <ul>
