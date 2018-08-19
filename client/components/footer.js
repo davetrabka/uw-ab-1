@@ -29,6 +29,11 @@ const Footer = () => (
           <h5 className="white-text">Go To:</h5>
           <ul>
             <li>
+              <Link className="white-text" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
               <Link className="white-text" to="/neighborhood">
                 About Boonville
               </Link>
@@ -38,7 +43,11 @@ const Footer = () => (
                 Our Reviews
               </Link>
             </li>
-            <i className="fas fa-ellipsis-h" />
+          </ul>
+        </div>
+        <div className="col l2 s12">
+          <h5 className="white-text">Find Us On:</h5>
+          <ul>
             <li>
               <a
                 className="white-text"
