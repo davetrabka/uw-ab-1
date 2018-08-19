@@ -21,10 +21,10 @@ const Description = () => (
       <h6 className="header col s12">
         You'll have access to the entire house, including 2 bedroooms (2 Queen
         beds) as well as family room with fireplace, pull out sofa and 2
-        couches, living room with 2 couches, dining room, kitchen with everyg
-        you need to create your own culinary masterpieces should you desire,
-        laundry room and 3 baths. There is also a back deck with screened in
-        porch plus a BBQ grill!
+        couches, living room with 2 couches, dining room, kitchen with
+        everything you need to create your own culinary masterpieces should you
+        desire, laundry room and 3 baths. There is also a back deck with
+        screened in porch plus a BBQ grill!
       </h6>
       <h6 className="header col s12">
         When you arrive you will be greeted with a bottle of locally made

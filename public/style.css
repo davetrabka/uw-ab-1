@@ -32,6 +32,12 @@ form div {
   font-size: 1.35rem;
 }
 
+.cursive-robert {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  padding-left: 0.2rem;
+}
+
 #loading {
   height: 100vh;
   display: flex;
@@ -107,10 +113,6 @@ nav ul a:hover {
   left: 0;
   bottom: 0;
   width: 100%;
-}
-
-.right-align {
-  text-align: right;
 }
 
 input {
@@ -249,13 +251,14 @@ ui.button {
   background-size: cover;
 }
 
-.parallax-hike {
+.parallax-home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url('/img/hiking-path.jpeg');
-  width: 100%;
+    url('/img/outside-home-front-2.jpg');
+  height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .lock-icon {
@@ -326,6 +329,46 @@ footer.page-footer {
 
 .dashboard-container {
   padding: 7rem 0;
+}
+
+.star-icon {
+  font-size: 2rem;
+  margin: 1rem 0.5rem;
+}
+
+.star-icon-small {
+  font-size: 1.8rem;
+  margin: 1rem 0.15rem;
+  padding-top: 0.4rem;
+}
+
+.rating-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-cat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-left-margin {
+  margin-left: 3rem;
+}
+
+.star-left-margin {
+  margin-left: 0.5rem;
+}
+
+.align-items-override {
+  align-items: flex-start;
+  padding: 5rem 0;
+  height: 100% !important;
+}
+
+.small-margin {
+  margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 992px) {

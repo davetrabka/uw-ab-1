@@ -5,8 +5,11 @@ const Footer = () => (
   <footer id="footer" className="page-footer teal">
     <div className="container">
       <div className="row">
-        <div className="col l6 s12">
-          <h5 className="white-text">From Robert, Your Superhost:</h5>
+        <div className="col l8 s12">
+          <h5 className="grey-text text-lighten-4">
+            From <span className="cursive-robert white-text"> Robert</span> ,
+            Your Superhost:
+          </h5>
           <p className="grey-text text-lighten-4">
             "I believe in traveling the world, meeting new people, and
             experiencing new cultures. Life is too short to put things off. My
@@ -26,25 +29,16 @@ const Footer = () => (
           <h5 className="white-text">Go To:</h5>
           <ul>
             <li>
-              <Link className="white-text" to="/reviews">
-                Reviews
-              </Link>
-            </li>
-            <li>
-              <Link className="white-text" to="/directions">
-                Directions
-              </Link>
-            </li>
-            <li>
               <Link className="white-text" to="/neighborhood">
                 About Boonville
               </Link>
             </li>
-          </ul>
-        </div>
-        <div className="col l2 s12">
-          <h5 className="white-text">Bookings:</h5>
-          <ul>
+            <li>
+              <Link className="white-text" to="/reviews">
+                Our Reviews
+              </Link>
+            </li>
+            <i className="fas fa-ellipsis-h" />
             <li>
               <a
                 className="white-text"

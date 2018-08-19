@@ -28,7 +28,7 @@ const Splash = () => (
         <div className="row center">
           <a
             href="https://www.airbnb.com/rooms/7664188?location=Boonville%2C%20MO%2C%20United%20States&adults=1&children=0&infants=0&s=gejNTM4w"
-            className="btn-large waves-effect waves-light teal lighten-1 ">
+            className="btn-large waves-effect waves-light teal lighten-1">
             Book your stay today!
           </a>
         </div>

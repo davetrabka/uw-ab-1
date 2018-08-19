@@ -37,16 +37,31 @@ class ReviewsList extends Component {
             </div>
           </div>
         ) : (
-          <div className="row reviews-container">
-            {this.props.reviews.map(review => (
-              <ReviewCard
-                key={review.id}
-                author={review.author}
-                date={review.date}
-                review={review.review}
-              />
-            ))}
-          </div>
+          <>
+            <div className="center row container">
+              <br />
+              <h3 className="smithsonian black-text">
+                88 Airbnb Reviews & Counting!
+                <br />
+              </h3>
+              <i className="fas fa-star star-icon" />
+              <i className="fas fa-star star-icon" />
+              <i className="fas fa-star star-icon" />
+              <i className="fas fa-star star-icon" />
+              <i className="fas fa-star star-icon" />
+              <div id="divider-line" />
+            </div>
+            <div className="row reviews-container">
+              {this.props.reviews.map(review => (
+                <ReviewCard
+                  key={review.id}
+                  author={review.author}
+                  date={review.date}
+                  review={review.review}
+                />
+              ))}
+            </div>
+          </>
         )}
       </div>
     );
