@@ -4,8 +4,8 @@ const Description = () => (
   <div className="parallax-container">
     <div className="container row">
       <h3 className="center smithsonian">
-        Boonville ranked one of the 10 best small<br />
-        towns in America by the Smithsonian!
+        Boonville ranked one of the 10 best small towns in America by the
+        Smithsonian!
       </h3>
       <div id="divider-line" />
       <h6 className="header col s12">

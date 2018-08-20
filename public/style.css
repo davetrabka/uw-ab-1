@@ -39,7 +39,7 @@ form div {
 }
 
 .shadow-text {
-  text-shadow: 1px 1px rgb(100, 100, 100);
+  text-shadow: 1px 1px rgb(240, 240, 240);
 }
 
 #loading {
@@ -424,17 +424,33 @@ footer.page-footer {
     top: 40%;
   }
   #index-banner .section {
-    top: 10%;
+    top: 15%;
+  }
+  #divider-line {
+    margin: 15px auto;
   }
   .reviews {
     margin: 1rem 1rem;
     width: 100%;
   }
+  #logo {
+    width: auto;
+    height: 40px;
+    margin-top: 1rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  h6 {
+    font-size: 1rem !important;
+    line-height: 1.1rem !important;
+    letter-spacing: 1px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   #index-banner .section {
-    top: 0;
+    top: 15%;
   }
   .reviews {
     margin: 1rem 1rem;
