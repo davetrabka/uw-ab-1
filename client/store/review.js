@@ -19,7 +19,7 @@ export const getReviews = () => async dispatch => {
 export const createReview = review => async dispatch => {
   const { data } = await axios.post(`/api/reviews`, review);
   dispatch(createdReview(data));
-  history.push('/');
+  history.push('/reviews');
 };
 
 export default function(state = initialState, action) {
