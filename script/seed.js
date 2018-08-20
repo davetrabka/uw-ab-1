@@ -17,6 +17,11 @@ async function seed() {
         'Robert’s home was perfect for our family trip to the state fair. The house was clean and close to downtown Boonville, the casino, and the river. Robert went above and beyond making sure all of our needs were met. I would definite recommend this property if you are staying in Boonville!',
     }),
     Review.create({
+      author: '有为',
+      date: 'August 2018',
+      review: 'Great place and definitely will come back if we have chance',
+    }),
+    Review.create({
       author: 'Terry',
       date: 'July 2018',
       review:
@@ -71,6 +76,11 @@ async function seed() {
         'We loved staying at robert’s home! It was very conveniently located for our Katy Trail biking experience. The house was very clean and Robert was very accommodating and communicated very well with us! We will stay again if we are in the area!',
     }),
     Review.create({
+      author: 'Robin',
+      date: 'May 2018',
+      review: 'Robert is a fantastic host!!!',
+    }),
+    Review.create({
       author: 'Armando',
       date: 'May 2018',
       review:
@@ -93,6 +103,11 @@ async function seed() {
       date: 'April 2018',
       review:
         'Your home was so nice and loved the extra mile you went from local info, security details and extra amenities with wine and cookies!! It was like staying in your own home and not a rental.',
+    }),
+    Review.create({
+      author: 'Malachi',
+      date: 'April 2018',
+      review: 'Very great place to stay. Highly recommend.',
     }),
     Review.create({
       author: 'Ben',
@@ -309,6 +324,152 @@ async function seed() {
       date: 'January 2017',
       review:
         'We only stayed one night but it was in a perfect location for our family. I would definitely love to rent this location again. Everything was nicely marked so we knew where to find everything.',
+    }),
+    Review.create({
+      author: 'Jane',
+      date: 'January 2017',
+      review:
+        'Robert has excellent communication and is very helpful. The house is lovely and nicely located. I recommend it to any traveler and plan to return.',
+    }),
+    Review.create({
+      author: "B'ney",
+      date: 'December 2016',
+      review:
+        'We had a group of 6 friends come and spend an extended weekend just hanging out and playing games. The chalkboard signs were very helpful and made us feel very welcome! The kitchen was very well stocked with appliances - even a kitchenaid mixer! The house is very close to the Main Street shops, which are all very fun and unique, and a Diner that was fantastic! I definitely recommend staying here :)',
+    }),
+    Review.create({
+      author: 'Will',
+      date: 'December 2016',
+      review:
+        "Perfect place to feel like you're at home after a long time on the road",
+    }),
+    Review.create({
+      author: 'Jennifer',
+      date: 'November 2016',
+      review:
+        'Rob and his home were absolutely wonderful! The six of us comfortably stayed in the house. Rob had everything prepared for us that we would need. If I ever travel to this area again, I would not hesitate to stay here for a second time.',
+    }),
+    Review.create({
+      author: 'Tom',
+      date: 'November 2016',
+      review: `The house was exactly as described! You can really feel how the host took pride in their rental and honestly wanted to make sure we had a great experience. If I could give our host 10 stars for communication, I would! His response time was incredibly fast! Our host welcomed us with a very thoughtful gift and there were complete instructions for checking in as well as checking out.
+        We found the town to be very charming and hit a home run with a few local restaurants. I've rented many homes across the country and this one has to be one of the best values I've seen.
+        I would highly recommend this house and the host to anyone.
+
+        Tom`,
+    }),
+    Review.create({
+      author: 'Leah',
+      date: 'October 2016',
+      review: `It was a great location for biking the Katy Trail and a very quiet street. Robert was quick to answer any questions we had. We really appreciated the kitchen with all the dishes and cookware as there were six of us and we definitely used them.`,
+    }),
+    Review.create({
+      author: 'Dianne',
+      date: 'September 2016',
+      review: `We were greeted upon our arrival with a nice bottle of wine from a local winery and notes around the house so we knew where to find anything we might need for our stay. Rob was great at communicating prior to and during our visit. He is readily available via text or phone. The house is just as described and photos are very accurate. The home is warm and cozy and a great location for accessing the Katy Trail or exploring downtown.
+      Rob was also very accommodating and flexible with our schedule for check in and check out. Thank you for a great experience!`,
+    }),
+    Review.create({
+      author: 'Quintin',
+      date: 'August 2016',
+      review: `I stayed here for a week visiting my girlfriend who works in Columbia. The space was fantastic, huge downstairs lounge area, beautiful kitchen and bedrooms on the main level. The yard was easily accessible but we did not use it, we were mainly there at night once our daily adventures were done. The town itself did not have a lot going on aside from the Art Festival we saw on the weekend. I had to hit the gym and there was a YMCA close by that had a great facility for 6 dollars entry. However, we mainly picked this house due to the location of the Katy Trail. We were able to rent bikes right down the road and explore the trail, it was great! There was a casino just a few minutes away as well, we didn't get a chance to stop in this time, maybe next! Rob was very easy to speak with, maintained communication the whole trip. I noticed they didn't have an ironing board and he dropped one off for us. There was a nice bottle of wine awaiting us in kitchen upon arrival, I couldn't have asked for a better first time Air BnB experience! Thank you Rob!`,
+    }),
+    Review.create({
+      author: 'Janet',
+      date: 'August 2016',
+      review: `Thank-you so much Robert. The house was just as the listing said, clean, and well stocked with everything anyone might need. Robert was a great host! Would definitely stay there again.`,
+    }),
+    Review.create({
+      author: 'Diana',
+      date: 'August 2016',
+      review: `Robert sent several messages: one to confirm and welcome us, then to wish us a safe trip and instructions on how to get to and into the house, made several restaurant suggestions and even warned us about backyard storm damage work that might be ongoing while we were there. We will be back to stay in the house when we return to visit our son who is in college.`,
+    }),
+    Review.create({
+      author: 'Jesse',
+      date: 'August 2016',
+      review: `The house and location were wonderful. Me and my friends had a wonderful time and plan to stay again and also recommend it to others.`,
+    }),
+    Review.create({
+      author: 'Patrick',
+      date: 'July 2016',
+      review: `We had a great time at Roberts place. We got in later than expected ;but still, I unpacked the bike and headed to the Katy Trail. 20 miles later I was tired but happy, having dusted off the cobwebs of inaction, limited only by the fading daylight. We'd come again for sure. Nice clean place to stay.`,
+    }),
+    Review.create({
+      author: 'Mark',
+      date: 'July 2016',
+      review: `Robert was more than accommodating. House was exactly as described. Would stay there again.`,
+    }),
+    Review.create({
+      author: 'Ryan & Amy',
+      date: 'July 2016',
+      review: `Loved Robert's place! It was perfect for our party of six. Robert has done such a great job making the house guest friendly. He really thought of everything! I just wish we could have stayed longer. We will definitely return when we are coming back that way.`,
+    }),
+    Review.create({
+      author: 'Denoya',
+      date: 'June 2016',
+      review: `Robert was very accommodating. Check in and check out timing was able to be adjusted to meet our needs. The house was perfect for our family. The kids enjoyed having a "kid space" downstairs. The kitchen and dining area were great. We did most of our meals at the house. The house had a great location. We were able to easily access the KATY trail and cycle around town.`,
+    }),
+    Review.create({
+      author: 'Arturo',
+      date: 'June 2016',
+      review: `Robert was an amazing host and his place was phenomenal! Robert made sure to make our stay an amazing one by making us feel at home and even left little notes for us throughout the house to add a personal touch. Robert made sure to let us know he was always a call or text away if anything was needed and he was always prompt with his responses. I recommend Robert and his house to anyone who wants an amazing experience and a wonderful host!`,
+    }),
+    Review.create({
+      author: 'Deon',
+      date: 'June 2016',
+      review: `Very nicely appointed home in a quiet neighborhood, located close to the Missouri River and the idyllic downtown of Boonville. Accommodations are great for a family.`,
+    }),
+    Review.create({
+      author: 'Kent',
+      date: 'May 2016',
+      review: `Robert had great communication throughout the whole process. Plus he had notes on chalkboards in the house and made us feel very much at home. He has a cute and well maintained house on a quiet culdesac. Everything in house was very clean and tidy. Really liked the fact that he had a coded keyless entry door. We highly recommend Robert as an Airbnb host.
+
+      Kent and Kathy Lewis`,
+    }),
+    Review.create({
+      author: 'Galen',
+      date: 'May 2016',
+      review: `Our family of six enjoyed a wonderful weekend at Robert's home. Everything was so well laid out! There were small chalkboards and descriptions sheets in all the right places. The home was very tidy and even smelled nice! The neighborhood was very quiet and pleasant and was minutes away from a quaint downtown and the Missouri River. Beds were comfortable, kitchen and bathrooms were very clean. The owners communication was timely and responsive. We would return without hesitation!`,
+    }),
+    Review.create({
+      author: 'Deborah',
+      date: 'May 2016',
+      review: `Robert's home exceeded our expectations in so many ways. Nearly all of our questions were answered before we arrived, due to Robert's keen attention to details. The home was decorated tastefully. It met every need we had, and it was very comfortable. We spent mornings and evenings on the comfortable screened porch, listening to the birds. Robert let us know about many local attractions and helped us find restaurants. I highly recommend this home and host!`,
+    }),
+    Review.create({
+      author: 'Jeanne',
+      date: 'April 2016',
+      review: `Robert was a great host and easy to correspond with. He was always just a text message away. The house was clean and comfy just like the pictures and the WiFi worked great. We enjoyed touring the Warm Springs Ranch, walking part of the Katy Trail including the "new" bridge, and doing the walking tour of Boonville. The old jail was especially interesting.`,
+    }),
+    Review.create({
+      author: 'Aaron',
+      date: 'March 2016',
+      review: `What a wonderful, amazing place. Felt right at home. Everything was just so welcoming. I would not hesitate to stay here again. Gorgeous view of the river!`,
+    }),
+    Review.create({
+      author: 'Crystal',
+      date: 'December 2015',
+      review: `When we arrived at the house it was more than we expected. The decorations for the holidays were awesome and Christmas music was playing when we walked in the door. The home is very warm and inviting. Robert was a great host and very quick in responding to text and emails. Definitely made us feel at home. Will use again on future visits!`,
+    }),
+    Review.create({
+      author: 'Rocky',
+      date: 'October 2015',
+      review: `This house and experience was awesome!! We needed a house for one night at the last minute and this was open. For some reason I had problems online trying to secure the deal but Robert, the owner, was texting me during the process and calling Airbnb to make sure everything got done. Once we made it to the house, it was even better than what we had hoped for! The house was so clean and in order. Robert had everything marked and helpful notes throughout the house if case we needed anything. The house is on a quiet street on a culdesac. Also, the town of Boonville is awesome too! We had never been there before but it is a beautiful town with many shopping and eating establishments to choose from. I would definitely stay here if we ever get back to this area!`,
+    }),
+    Review.create({
+      author: 'Kevin',
+      date: 'October 2015',
+      review: `Robert did a great job, communication was good and the home was accurately described in the listing. He's a great host who really goes the extra mile in making sure it's a pleasant stay. The home was clean and welcoming and Robert made sure everything was ready to go before we arrived. Booneville is a nice small town that is not too far from Columbia and the next time we're in the area we would definitely look to book again. Thanks Robert!`,
+    }),
+    Review.create({
+      author: 'Gail',
+      date: 'September 2015',
+      review: `The listing description was accurate. The house was lovely and clean. There were chalk boards with information s to where everything us. The lights were on and a bottle of wine and a nice note was waiting for us. Robert was a great host and the house was nice, clean comfortable coffee and towels and anything needed was available. The back yard had a nice outdoor area as well. It was very easy to communicate with Robert. This was my first experience with airbnb and Rob made it very easy.`,
+    }),
+    Review.create({
+      author: 'Gail',
+      date: 'September 2015',
+      review: `The listing description was accurate. The house was lovely and clean. There were chalk boards with information s to where everything us. The lights were on and a bottle of wine and a nice note was waiting for us. Robert was a great host and the house was nice, clean comfortable coffee and towels and anything needed was available. The back yard had a nice outdoor area as well. It was very easy to communicate with Robert. This was my first experience with airbnb and Rob made it very easy.`,
     }),
   ]);
 
