@@ -18,7 +18,7 @@ const OtherActivities = () => (
       </p>
       <p className="activity-text">
         Downtown Boonville and the various shops are a must do. If you love
-        antiques then you will be in heaven! The Palance at he corner of Morgan
+        antiques then you will be in heaven! The Palace at the corner of Morgan
         & Main serves up some of the best food in town and is always hopping on
         the weekends!
       </p>

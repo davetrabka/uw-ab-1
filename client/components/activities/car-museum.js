@@ -25,9 +25,9 @@ const CarMuseum = () => (
       </p>
       <p className="activity-text">
         Lewis Miller is a direct descendent of the Mitchell and Lewis families
-        and has one of the largest collections of the various products sold by
-        the their respective companies, including The Mitchell Wagon Company,
-        Wisconsin Wheel Works, and the Mitchell-Lewis Motor Company.
+        and has one of the largest collections of their various products,
+        including items from The Mitchell Wagon Company, Wisconsin Wheel Works,
+        and the Mitchell-Lewis Motor Company.
       </p>
       <p className="activity-text">
         Tours are open to the public, but by appointment only. Don't forget to
