@@ -13,6 +13,9 @@ class ReviewsList extends Component {
   };
 
   render() {
+    const orderedReviews = this.props.reviews.sort(
+      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
     return (
       <div className="container reviews-container">
         <img
@@ -51,7 +54,7 @@ class ReviewsList extends Component {
               <div id="divider-line" />
             </div>
             <div className="row reviews-container">
-              {this.props.reviews.map(review => (
+              {orderedReviews.map(review => (
                 <ReviewCard
                   key={review.id}
                   author={review.author}
