@@ -439,12 +439,13 @@ footer.page-footer {
     margin-top: 1rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   h6 {
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
     line-height: 1.1rem !important;
     letter-spacing: 1px;
+    margin: 3px 0;
   }
 }
 
