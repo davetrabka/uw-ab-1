@@ -40,15 +40,15 @@ class ReviewsList extends Component {
           <>
             <div className="center row container">
               <br />
-              <h3 className="smithsonian black-text">
+              <h3 className="smithsonian teal-text shadow-text">
                 88 Airbnb Reviews & Counting!
                 <br />
               </h3>
-              <i className="fas fa-star star-icon" />
-              <i className="fas fa-star star-icon" />
-              <i className="fas fa-star star-icon" />
-              <i className="fas fa-star star-icon" />
-              <i className="fas fa-star star-icon" />
+              <i className="fas fa-star star-icon teal-text shadow-text" />
+              <i className="fas fa-star star-icon teal-text shadow-text" />
+              <i className="fas fa-star star-icon teal-text shadow-text" />
+              <i className="fas fa-star star-icon teal-text shadow-text" />
+              <i className="fas fa-star star-icon teal-text shadow-text" />
               <div id="divider-line" />
             </div>
             <div className="row reviews-container">

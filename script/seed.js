@@ -17,11 +17,6 @@ async function seed() {
         'Robert’s home was perfect for our family trip to the state fair. The house was clean and close to downtown Boonville, the casino, and the river. Robert went above and beyond making sure all of our needs were met. I would definite recommend this property if you are staying in Boonville!',
     }),
     Review.create({
-      author: '有为',
-      date: 'August 2018',
-      review: 'Great place and definitely will come back if we have chance',
-    }),
-    Review.create({
       author: 'Terry',
       date: 'July 2018',
       review:
