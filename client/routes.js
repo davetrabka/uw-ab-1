@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import Landing from './components/landing';
 import ReviewsList from './components/reviews-list';
 import LogIn from './components/auth-form';
-import UserDashboard from './components/user-dashboard/user-home';
+import UserDashboard from './components/user-home';
+import Boonville from './components/boonville';
 import { me } from './store';
 
 class Routes extends Component {
@@ -21,6 +22,7 @@ class Routes extends Component {
         <Route exact path="/" component={Landing} />
         <Route exact path="/reviews" component={ReviewsList} />
         <Route exact path="/login" component={LogIn} />
+        <Route exact path="/neighborhood" component={Boonville} />
         {isLoggedIn && (
           <Switch>
             <Route path="/admin" component={UserDashboard} />

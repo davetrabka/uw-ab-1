@@ -1,8 +1,8 @@
 import axios from 'axios';
+import history from '../history';
 
 const GOT_REVIEWS = 'GOT_USER';
 const CREATED_REVIEW = 'CREATED_REVIEW';
-const DELETED_REVIEW = 'DELETED_REVIEW';
 
 const initialState = {
   reviews: [],
@@ -10,16 +10,16 @@ const initialState = {
 
 const gotReviews = reviews => ({ type: GOT_REVIEWS, reviews });
 const createdReview = review => ({ type: CREATED_REVIEW, review });
-const deletedReview = () => ({ type: DELETED_REVIEW });
 
 export const getReviews = () => async dispatch => {
   const { data } = await axios.get(`/api/reviews`);
   dispatch(gotReviews(data));
 };
 
-export const createReview = () => async dispatch => {
-  const { data } = await axios.post(`/api/reviews`);
+export const createReview = review => async dispatch => {
+  const { data } = await axios.post(`/api/reviews`, review);
   dispatch(createdReview(data));
+  history.push('/');
 };
 
 export default function(state = initialState, action) {
@@ -29,11 +29,10 @@ export default function(state = initialState, action) {
         ...state,
         reviews: action.reviews,
       };
-
     case CREATED_REVIEW:
       return {
         ...state,
-        reviews: [...state.reviews, action.reviews],
+        reviews: [...state.reviews, action.review],
       };
     default:
       return state;

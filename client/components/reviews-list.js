@@ -6,11 +6,11 @@ import { me, getReviews } from '../store';
 class ReviewsList extends Component {
   state = { loading: true };
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.props.loadInitialData();
     this.props.getReviews();
     this.setState({ loading: false });
-  }
+  };
 
   render() {
     return (
@@ -37,12 +37,11 @@ class ReviewsList extends Component {
             </div>
           </div>
         ) : (
-          <>
+          <React.Fragment>
             <div className="center row container">
               <br />
               <h3 className="smithsonian teal-text shadow-text">
-                88 Airbnb Reviews & Counting!
-                <br />
+                Dedicated to giving you a 5-star stay! <br />
               </h3>
               <i className="fas fa-star star-icon teal-text shadow-text" />
               <i className="fas fa-star star-icon teal-text shadow-text" />
@@ -61,7 +60,7 @@ class ReviewsList extends Component {
                 />
               ))}
             </div>
-          </>
+          </React.Fragment>
         )}
       </div>
     );

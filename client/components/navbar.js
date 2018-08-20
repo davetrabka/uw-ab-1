@@ -27,14 +27,23 @@ class Navbar extends Component {
               </Link>
             </li>
             {this.props.isLoggedIn ? (
-              <li>
-                <Link
-                  to="#"
-                  className="logout waves-effect waves-light white teal-text btn-small"
-                  onClick={this.props.handleLogout}>
-                  Log Out
-                </Link>
-              </li>
+              <React.Fragment>
+                <li>
+                  <Link
+                    to="/admin"
+                    className="logout waves-effect waves-light white teal-text btn-small">
+                    Add Review
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="#"
+                    className="logout waves-effect waves-light white teal-text btn-small"
+                    onClick={this.props.handleLogout}>
+                    Log Out
+                  </Link>
+                </li>
+              </React.Fragment>
             ) : (
               ''
             )}

@@ -13,6 +13,6 @@ router.post('/', async (req, res, next) => {
     const newReview = await Review.create(req.body);
     res.json(newReview);
   } catch (error) {
-    console.loog(error);
+    console.log(error);
   }
 });

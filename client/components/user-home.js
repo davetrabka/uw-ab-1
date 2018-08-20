@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { me } from '../../store';
+import { me, createReview } from '../store';
 
 class UserDashboard extends Component {
-  componentDidMount() {
+  componentDidMount = () => {
     this.props.loadInitialData();
-  }
+  };
 
-  handleSubmit(evt) {}
+  handleSubmit = evt => {
+    evt.preventDefault();
+    const author = evt.target.author.value;
+    const date = evt.target.date.value;
+    const review = evt.target.review.value;
+    this.props.createReview({ author, date, review });
+  };
 
   render() {
     return (
@@ -18,7 +24,7 @@ class UserDashboard extends Component {
           alt="background image"
         />
         <div className="row ">
-          <div className="col m6 s6">
+          <div className="col offset-l2 l8 s12">
             <div className="card-panel">
               <h5 className="teal-text">Add A Review</h5>
               <form onSubmit={this.handleSubmit}>
@@ -37,7 +43,7 @@ class UserDashboard extends Component {
                 <div className="input-field col s12 ">
                   <textarea id="review" className="materialize-textarea" />
                   <label name="review" htmlFor="review">
-                    Review Text
+                    Review Detail
                   </label>
                 </div>
                 <div>
@@ -63,6 +69,7 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
   loadInitialData: () => dispatch(me()),
+  createReview: review => dispatch(createReview(review)),
 });
 
 export default connect(mapState, mapDispatch)(UserDashboard);

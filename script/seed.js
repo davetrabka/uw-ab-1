@@ -461,11 +461,6 @@ async function seed() {
       date: 'September 2015',
       review: `The listing description was accurate. The house was lovely and clean. There were chalk boards with information s to where everything us. The lights were on and a bottle of wine and a nice note was waiting for us. Robert was a great host and the house was nice, clean comfortable coffee and towels and anything needed was available. The back yard had a nice outdoor area as well. It was very easy to communicate with Robert. This was my first experience with airbnb and Rob made it very easy.`,
     }),
-    Review.create({
-      author: 'Gail',
-      date: 'September 2015',
-      review: `The listing description was accurate. The house was lovely and clean. There were chalk boards with information s to where everything us. The lights were on and a bottle of wine and a nice note was waiting for us. Robert was a great host and the house was nice, clean comfortable coffee and towels and anything needed was available. The back yard had a nice outdoor area as well. It was very easy to communicate with Robert. This was my first experience with airbnb and Rob made it very easy.`,
-    }),
   ]);
 
   console.log(`seeded successfully`);

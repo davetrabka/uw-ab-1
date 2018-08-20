@@ -78,14 +78,7 @@ const Footer = () => (
           <p> Admin Access</p>
         </Link>
         <div>
-          <i className="far fa-copyright " /> Copyright 2018 | Built by{' '}
-          <a
-            className="white-text cursive"
-            href="http://davidtrabka.com"
-            target="_blank"
-            rel="noopener noreferrer">
-            Dave Trabka
-          </a>
+          <i className="far fa-copyright " /> Copyright 2018
         </div>
       </div>
     </div>
