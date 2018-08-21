@@ -22,7 +22,7 @@ const Summary = () => (
       <Link
         to="/neighborhood"
         className="btn-large waves-effect waves-light teal lighten-1">
-        Explore our favorite Boonville activities
+        Explore our favorite activities
       </Link>
       <br />
     </div>
