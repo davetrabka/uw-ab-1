@@ -19,7 +19,7 @@ const Boonville = () => (
       <React.Fragment>
         <div className="center row">
           <h4 className="teal-text">
-            Booneville offers fun for the whole family! <br />
+            Boonville offers fun for the whole family! <br />
           </h4>
           <div id="divider-line" />
         </div>
